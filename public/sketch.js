@@ -1,3 +1,5 @@
+// sketch.js
+
 const socket = io('http://localhost');
 
 let players = [];
@@ -9,7 +11,13 @@ function setup() {
 
 function draw() {
   background(220);
-  players.forEach(player => player.draw());
+  
+  
+  // Update and draw each player
+  players.forEach(player => {
+    player.draw();   // Draw player on the canvas
+    console.log(player)
+  });
 }
 
 function updatePlayers(serverPlayers) {

@@ -1,5 +1,4 @@
 const express = require("express");
-
 let Player = require("./Player");
 
 const app = require('express')();
@@ -24,9 +23,9 @@ io.on("connection", socket => {
 });
 
 function updateGame() {
+  
+
   io.emit("heartbeat", players);
 }
 
 server.listen(80);
-
-
